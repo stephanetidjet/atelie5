@@ -14,7 +14,10 @@ int resultat = a ~/ b;
 print('Résultat : $resultat');
     } on FormatException {
         print('Erreur : vous devez entrer un nombre.');
-    }finally {
+    }on IntegerDivisionByZeroException {
+  print('Erreur : division par zéro impossible.');
+}
+    finally {
   print('Fin du operation stephane');
 }
 }
